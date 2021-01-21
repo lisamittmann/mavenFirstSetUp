@@ -8,11 +8,14 @@ public class CheckAmountPeopleTest {
 
     @ParameterizedTest
     @CsvSource({
-            "30, 'Less than or 30 people'",
-            "18, 'Less than or 30 people'",
-            "59, 'More than 30 people'"
+            "30, 'yellow', 'Amount of people is okay'",
+            "45, 'yellow', 'Amount of people is not okay'",
+            "59, 'green', 'Amount of people is okay'",
+            "13, 'red', 'Amount of people is not okay'",
+            "65, 'green', 'Amount of people is not okay'",
+            "17, 'orange', 'Undefined level or amount'"
     })
-    public void testCheckGreater30(int amount, String result){
-        assertEquals(result, CheckAmountPeople.checkGreater30(amount));
+    public void testCheckGreater30(int amount, String level, String result){
+        assertEquals(result, CheckAmountPeople.checkGreater30(amount, level));
     }
 }
