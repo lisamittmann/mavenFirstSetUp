@@ -13,9 +13,9 @@ public class CheckAmountPeopleTest {
             "59, 'green', 'Amount of people is okay'",
             "13, 'red', 'Amount of people is not okay'",
             "65, 'green', 'Amount of people is not okay'",
-            "17, 'orange', 'Undefined level or amount'"
+            "17, 'orange', 'Undefined level'"
     })
-    public void testCheckGreater30(int amount, String level, String result){
-        assertEquals(result, CheckAmountPeople.checkGreater30(amount, level));
+    public void testCheckAmountAndLevel(int amount, String level, String result){
+        assertEquals(result, CheckAmountPeople.checkAmountAndLevel(amount, level));
     }
 }
