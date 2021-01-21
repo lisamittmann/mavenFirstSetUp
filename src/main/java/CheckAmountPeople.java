@@ -22,7 +22,6 @@ public class CheckAmountPeople {
             case "yellow":
                 return 30;
             case "red":
-                return -1;
             default:
                 return -1;
         }
