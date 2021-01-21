@@ -3,9 +3,11 @@ public class CalculateFactorial {
     public static int calculateFactorial(int n){
 
         int result = 1;
+        int i = 1;
 
-        for(int i = 1; i <= n; i++) {
+        while(i <= n) {
             result = result*i;
+            i++;
         }
 
         return result;
